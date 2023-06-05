@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>Populating Select from JSON</h1>
+    <select name="cars" id="cars"></select>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+$(document).ready(function() {
+  var url = "https://loantechsupport.com/abc.json";
+
+  $.getJSON(url, function(data) {
+    console.log(data);
+  })
+  .fail(function(jqXHR, textStatus, errorThrown) {
+    console.log("Error loading JSON file: " + errorThrown);
+  });
+});
+      </script>
+</body>
+</html>
